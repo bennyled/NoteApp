@@ -11,6 +11,8 @@ function init(){
   render();
   
 }
+
+
 function render() {
   let content = document.getElementById("content");
   
@@ -47,6 +49,7 @@ function render() {
   renderDeletedNotes();
 }
 
+
 function showTextarea() {
   let showTitle = document.getElementById("note-title"); // greift auf die ID 'note-title' zu
   let showButton = document.getElementById("addbutton"); // greift auf die ID 'addbuton' zu
@@ -54,6 +57,7 @@ function showTextarea() {
   showTitle.classList.remove("d-none"); // Entfernt die CSS-Klasse 'd-none' und zeigt das Eingabefeld 'Titel' an
   showButton.classList.remove("d-none"); // Entfernt die CSS-Klasse 'd-none' und zeigt den Button 'Notiz hinzufügen' an
 }
+
 
 function addNote() {
   let title = document.getElementById("note-title");
@@ -63,6 +67,7 @@ function addNote() {
   save();
   render();
 }
+
 
 function deleteNote(i) {
   deletedTitles.push(titles[i]); // verschiebt die gespeicherte Notiz in den Array 'deletedTitles'
@@ -74,12 +79,14 @@ function deleteNote(i) {
   render();
 }
 
+
 function save() {
   let titlesAsText = JSON.stringify(titles);
   localStorage.setItem("titles", titlesAsText);
   let notesAsText = JSON.stringify(notes);
   localStorage.setItem("notes", notesAsText);
 }
+
 
 function load() {
   let titlesAsText = localStorage.getItem("titles");
@@ -89,6 +96,7 @@ function load() {
     notes = JSON.parse(notesAsText);
   }
 }
+
 
 function renderDeletedNotes() {
   loadDeletedNotes();
@@ -116,7 +124,10 @@ function showDeletedNotes(){
 }
 
 
-
+function showAddedNotes(){
+  document.getElementById('noteSection').classList.remove('d-none');
+  document.getElementById('deletedNoteSection').classList.add('d-none');
+}
 function saveDeletedNotes(){
   let deletedTitlesAsText = JSON.stringify(deletedTitles);
   localStorage.setItem("deletedTitles", deletedTitlesAsText);

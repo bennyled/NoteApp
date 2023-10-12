@@ -35,11 +35,11 @@ textarea {
 }
 
 .d-none {
-    display: none; 
+    display: none !important ; 
 }
 
 .notefield{
-    position:absolute; 
+    position:absolute;
     border: 1px solid lightgray; 
     border-radius: 12px;
     display: flex; 
@@ -79,7 +79,7 @@ textarea {
 }
 
 .icon{
-    height: 24px; 
+    height: 36px; 
     
 }
 .sidebar-links{
@@ -99,7 +99,12 @@ a{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.note-section{
+.note-section, .deletedNoteSection{
     display: flex; 
     flex-wrap: wrap;
+}
+
+.notes-container{
+    display: flex; 
+    flex-direction: column;
 }

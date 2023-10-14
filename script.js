@@ -27,7 +27,7 @@ function render() {
     <div class="notes-container">
     <div class="note-section" id="noteSection">
     </div>
-    <div class="deletedNoteSection" id="deletedNoteSection">
+    <div class="deletedNoteSection d-none" id="deletedNoteSection">
     </div>
     </div>
     `;
@@ -62,10 +62,18 @@ function showTextarea() {
 function addNote() {
   let title = document.getElementById("note-title");
   let note = document.getElementById("note-content");
+  if(title.value === '' || note.value === '') {
+    noteSection.innerHTML = `
+    <div>
+    <p class="empty-notes">Bitte keine leeren Notizen erstellen!</p>
+    </div>
+    `;
+  } else {
   titles.push(title.value);
   notes.push(note.value);
   save();
   render();
+  }
 }
 
 
@@ -163,6 +171,7 @@ function deleteComplete(i) {
   save();
   saveDeletedNotes();
   render();
+  showDeletedNotes();
 }
 
 

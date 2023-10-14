@@ -103,7 +103,8 @@ a{
     display: flex; 
     flex-wrap: wrap;
     margin-top: 50px; 
-    
+    justify-content: center;
+
 }
 
 .notes-container{
@@ -118,8 +119,25 @@ a{
 }
 
 
-.empty-notes{
-    display: flex; 
+p{
     
-    font-weight: bold; 
+    display: flex; 
+    justify-content: center; 
 }
+
+
+
+
+.button1{
+    display: flex; 
+    justify-content: center;
+}
+
+
+button2{
+    display: flex; 
+    justify-content: center;
+    align-items: end; 
+
+}
+

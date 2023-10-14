@@ -21,7 +21,7 @@ function render() {
     <div class="notefield">
     <input type="text" placeholder="Titel" id="note-title"  class="d-none">
     <textarea placeholder="Notiz eingeben..." id="note-content" onclick="showTextarea()"></textarea>
-    <button id="addbutton" class="d-none" onclick="addNote()">Notiz hinzufügen </button>
+    <button id="addbutton" class="button1 d-none" onclick="addNote()">Notiz hinzufügen </button>
     </div>
     </div>
     <div class="notes-container">
@@ -59,13 +59,15 @@ function showTextarea() {
 }
 
 
+
+
 function addNote() {
   let title = document.getElementById("note-title");
   let note = document.getElementById("note-content");
   if(title.value === '' || note.value === '') {
     noteSection.innerHTML = `
-    <div>
-    <p class="empty-notes">Bitte keine leeren Notizen erstellen!</p>
+    <div class="empty-notes">
+    <p>Bitte keine leeren Notizen erstellen!</p>
     </div>
     `;
   } else {

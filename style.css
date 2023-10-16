@@ -1,6 +1,7 @@
 body{
     margin: 0; 
     font-family: 'raleway';
+    background-color: rgba(51, 51, 51, 0.05);
 }
 
 
@@ -8,8 +9,11 @@ header{
     padding-top: 24px; 
     padding-left: 120px; 
     display: flex;
-    border-bottom: 1px solid;
+    
+    box-shadow: 1px 10px 14px -2px rgba(0,0,0,0.75);
+    overflow: hidden; 
 }
+
 .logo{
     height: 64px; 
 }
@@ -64,7 +68,7 @@ textarea {
    flex-direction: column; 
     border: 1px solid lightgray; 
     border-radius: 12px; 
-    height: 300px; 
+    background-color:  white; 
     width: 300px; 
 }
 
@@ -90,6 +94,10 @@ textarea {
    
 }
 
+.sidebar-links-activation{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -104,6 +112,12 @@ a{
     flex-wrap: wrap;
     margin-top: 50px; 
     justify-content: center;
+    align-items: center; 
+    gap: 16px; 
+    padding-left: 50px; 
+    padding-right: 50px; 
+    padding-top: 40px; 
+    padding-bottom: 40px; 
 
 }
 
@@ -128,16 +142,32 @@ p{
 
 
 
-.button1{
-    display: flex; 
-    justify-content: center;
-}
+.button1, button2{
+      background-color: rgba(51, 51, 51, 0.05);
+      border-radius: 8px;
+      border-width: 0;
+      color: #333333;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 10px 12px;
+      text-align: center;
+      transition: all 200ms;
+      vertical-align: baseline;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+ }
+
+ .button1:hover{
+    background-color: rgba(51, 51, 51, 0.2);
+ }
 
 
-button2{
-    display: flex; 
-    justify-content: center;
-    align-items: end; 
-
-}
 

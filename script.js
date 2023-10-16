@@ -42,7 +42,7 @@ function render() {
       <div class="notecard" id="addNotecard">
       <b>${title}</b><br>
       ${note}
-      <button onclick="deleteNote(${i})">Notiz löschen</button>
+      <button class="button1" onclick="deleteNote(${i})">Notiz löschen</button>
       </div>
       `;
   }
@@ -57,7 +57,6 @@ function showTextarea() {
   showTitle.classList.remove("d-none"); // Entfernt die CSS-Klasse 'd-none' und zeigt das Eingabefeld 'Titel' an
   showButton.classList.remove("d-none"); // Entfernt die CSS-Klasse 'd-none' und zeigt den Button 'Notiz hinzufügen' an
 }
-
 
 
 
@@ -120,13 +119,17 @@ function renderDeletedNotes() {
       <div class="notecard deletedNotecard">
       <b>${title}</b><br>
       ${note}
-      <button onclick="restore(${i})">Wiederherstellen</button>
-      <button onclick="deleteComplete(${i})">Endgültig löschen</button>
+      <button class="button1" onclick="restore(${i})">Wiederherstellen</button>
+      <button class="button1" onclick="deleteComplete(${i})">Endgültig löschen</button>
       </div>
     `;
   }
 }
 
+
+function showActivation(){
+  document.getElementById('sidebar-links').classList.add('sidebar-links-activation');
+}
 
 function showDeletedNotes(){
   document.getElementById('deletedNoteSection').classList.remove('d-none');

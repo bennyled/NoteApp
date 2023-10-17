@@ -13,6 +13,17 @@ function init(){
 }
 
 
+function showNotesActivation(){
+  document.getElementById('sidebar').classList.add('sidebar-links-activate');
+  document.getElementById('sidebar2').classList.remove('sidebar-links-activate');
+}
+
+
+function showDeletedNotesActivation(){
+  document.getElementById('sidebar2').classList.add('sidebar-links-activate');
+  document.getElementById('sidebar').classList.remove('sidebar-links-activate');
+}
+
 function render() {
   let content = document.getElementById("content");
   
@@ -126,10 +137,6 @@ function renderDeletedNotes() {
   }
 }
 
-
-function showActivation(){
-  document.getElementById('sidebar-links').classList.add('sidebar-links-activation');
-}
 
 function showDeletedNotes(){
   document.getElementById('deletedNoteSection').classList.remove('d-none');

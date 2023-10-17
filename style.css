@@ -94,8 +94,8 @@ textarea {
    
 }
 
-.sidebar-links-activation{
-    background-color: rgba(0, 0, 0, 0.1);
+.sidebar-links-activate{
+    background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
 a{
@@ -170,4 +170,31 @@ p{
  }
 
 
+
+@media(max-width: 720px){
+    .note-section{
+        display: flex; 
+        flex-direction: column; 
+    }
+    
+}
+@media(max-width: 405px){
+    .note-section{
+        padding-left: 30px; 
+        padding-right: 30px; 
+    }
+}
+@media(max-width: 375px){
+    h1{
+        display: none; 
+    }
+}
+@media(max-width: 360px){
+    h1{
+        display: none; 
+    }
+    .notecard{
+        width: 250px; 
+    }
+}
 
